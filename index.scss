@@ -1,0 +1,209 @@
+@use 'sass:map';
+@use 'sass:math';
+
+//media query
+$breakpoints: (
+  mobile: 350px,
+  tablet: 720px,
+  laptop: 1200px,
+  desktop: 1520px,
+);
+
+@mixin media($size) {
+  $breakpoint: map.get($breakpoints, $size);
+  @media screen and (min-width: $breakpoint) {
+    @content;
+  }
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: inherit;
+  font-family: 'Overpass', sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style-type: none;
+}
+
+img {
+  display: block;
+}
+
+body {
+  background-color: #131518;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  color: white;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+.nv-main {
+  display: grid;
+  place-items: center;
+  height: Max(100vh, 667px);
+}
+
+@mixin card-style {
+  width: Min(327px, math.percentage(math.div(327, 375)));
+  background: radial-gradient(
+    98.96% 98.96% at 50% 0%,
+    #232a34 0%,
+    #181e27 100%
+  );
+  border-radius: 15px;
+}
+
+@mixin text {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22px;
+  color: #969fad;
+}
+
+.nv-rating-component,
+.nv-modal {
+  &[data-state='hidden'] {
+    display: none;
+  }
+}
+
+.nv-rating-component {
+  @include card-style();
+  padding: 24px 24px 32px 24px;
+
+  .star-container {
+    width: 40px;
+    height: 40px;
+    display: grid;
+    place-items: center;
+    background: #262e38;
+    border-radius: 50%;
+
+    .star {
+      width: 13.33px;
+      height: auto;
+    }
+  }
+
+  .title {
+    margin-top: 16px;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 30px;
+    color: #ffffff;
+  }
+
+  .text {
+    margin-top: 17px;
+    @include text;
+  }
+
+  .form {
+    margin-top: 24px;
+    display: grid;
+    grid-template-columns: repeat(5, 42px);
+    justify-content: space-between;
+
+    .radio {
+      appearance: none;
+    }
+
+    .value {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      background: #262e38;
+      cursor: pointer;
+      font-weight: 700;
+      font-size: 14px;
+      color: #7c8798;
+
+      &:hover {
+        background: #fc7614;
+        color: white;
+      }
+    }
+
+    .radio:checked + .value {
+      background: #7c8798;
+      color: white;
+    }
+
+    .submit {
+      margin-top: 24px;
+      grid-column: 1 / span 5;
+      height: 45px;
+      border-radius: 999px;
+      border: none;
+      background: #fc7614;
+      font-weight: 700;
+      font-size: 14px;
+      letter-spacing: 1.86667px;
+      color: #ffffff;
+      text-transform: uppercase;
+      cursor: pointer;
+
+      &:hover {
+        color: #fc7614;
+        background-color: white;
+      }
+    }
+  }
+}
+
+.nv-modal {
+  @include card-style();
+  padding: 34px 24px 37px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .image {
+    height: 96px;
+    width: auto;
+  }
+
+  .user-rating {
+    margin-top: 24px;
+    padding: 5px 12px;
+    background: #262e38;
+    border-radius: 999px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+    text-align: center;
+    color: #fc7614;
+  }
+
+  .title {
+    margin-top: 31px;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 30px;
+    text-align: center;
+    color: #ffffff;
+  }
+
+  .text {
+    margin-top: 10px;
+    @include text;
+    text-align: center;
+  }
+}

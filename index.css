@@ -1,0 +1,170 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: inherit;
+  font-family: "Overpass", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style-type: none;
+}
+
+img {
+  display: block;
+}
+
+body {
+  background-color: #131518;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  color: white;
+}
+
+.attribution a {
+  color: #3e52a3;
+}
+
+.nv-main {
+  display: grid;
+  place-items: center;
+  height: max(100vh, 667px);
+}
+
+.nv-rating-component[data-state=hidden],
+.nv-modal[data-state=hidden] {
+  display: none;
+}
+
+.nv-rating-component {
+  width: min(327px, 87.2%);
+  background: radial-gradient(98.96% 98.96% at 50% 0%, #232a34 0%, #181e27 100%);
+  border-radius: 15px;
+  padding: 24px 24px 32px 24px;
+}
+.nv-rating-component .star-container {
+  width: 40px;
+  height: 40px;
+  display: grid;
+  place-items: center;
+  background: #262e38;
+  border-radius: 50%;
+}
+.nv-rating-component .star-container .star {
+  width: 13.33px;
+  height: auto;
+}
+.nv-rating-component .title {
+  margin-top: 16px;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 30px;
+  color: #ffffff;
+}
+.nv-rating-component .text {
+  margin-top: 17px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22px;
+  color: #969fad;
+}
+.nv-rating-component .form {
+  margin-top: 24px;
+  display: grid;
+  grid-template-columns: repeat(5, 42px);
+  justify-content: space-between;
+}
+.nv-rating-component .form .radio {
+  appearance: none;
+}
+.nv-rating-component .form .value {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: #262e38;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 14px;
+  color: #7c8798;
+}
+.nv-rating-component .form .value:hover {
+  background: #fc7614;
+  color: white;
+}
+.nv-rating-component .form .radio:checked + .value {
+  background: #7c8798;
+  color: white;
+}
+.nv-rating-component .form .submit {
+  margin-top: 24px;
+  grid-column: 1/span 5;
+  height: 45px;
+  border-radius: 999px;
+  border: none;
+  background: #fc7614;
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 1.86667px;
+  color: #ffffff;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.nv-rating-component .form .submit:hover {
+  color: #fc7614;
+  background-color: white;
+}
+
+.nv-modal {
+  width: min(327px, 87.2%);
+  background: radial-gradient(98.96% 98.96% at 50% 0%, #232a34 0%, #181e27 100%);
+  border-radius: 15px;
+  padding: 34px 24px 37px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.nv-modal .image {
+  height: 96px;
+  width: auto;
+}
+.nv-modal .user-rating {
+  margin-top: 24px;
+  padding: 5px 12px;
+  background: #262e38;
+  border-radius: 999px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22px;
+  text-align: center;
+  color: #fc7614;
+}
+.nv-modal .title {
+  margin-top: 31px;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 30px;
+  text-align: center;
+  color: #ffffff;
+}
+.nv-modal .text {
+  margin-top: 10px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22px;
+  color: #969fad;
+  text-align: center;
+}
+
+/*# sourceMappingURL=index.css.map */
