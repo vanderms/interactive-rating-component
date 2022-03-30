@@ -2,6 +2,7 @@
   ratingComponent: document.querySelector('.nv-rating-component'),
   form: document.querySelector('.form'),
   modal: document.querySelector('.nv-modal'),
+
   init() {
     this.form.addEventListener('submit', (e) => {
       e.preventDefault();

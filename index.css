@@ -52,6 +52,16 @@ body {
   border-radius: 15px;
   padding: 24px 24px 32px 24px;
 }
+@media screen and (min-width: 1200px) {
+  .nv-rating-component {
+    width: 412px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .nv-rating-component {
+    padding: 32px 39px 32px 32px;
+  }
+}
 .nv-rating-component .star-container {
   width: 40px;
   height: 40px;
@@ -60,9 +70,20 @@ body {
   background: #262e38;
   border-radius: 50%;
 }
+@media screen and (min-width: 1200px) {
+  .nv-rating-component .star-container {
+    width: 48px;
+    height: 48px;
+  }
+}
 .nv-rating-component .star-container .star {
   width: 13.33px;
   height: auto;
+}
+@media screen and (min-width: 1200px) {
+  .nv-rating-component .star-container .star {
+    width: 16.75px;
+  }
 }
 .nv-rating-component .title {
   margin-top: 16px;
@@ -71,6 +92,13 @@ body {
   line-height: 30px;
   color: #ffffff;
 }
+@media screen and (min-width: 1200px) {
+  .nv-rating-component .title {
+    margin-top: 36px;
+    font-size: 28px;
+    line-height: 35px;
+  }
+}
 .nv-rating-component .text {
   margin-top: 17px;
   font-weight: 400;
@@ -78,14 +106,35 @@ body {
   line-height: 22px;
   color: #969fad;
 }
+@media screen and (min-width: 1200px) {
+  .nv-rating-component .text {
+    font-size: 15px;
+    line-height: 24px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .nv-rating-component .text {
+    margin-top: 9px;
+  }
+}
 .nv-rating-component .form {
   margin-top: 24px;
   display: grid;
   grid-template-columns: repeat(5, 42px);
   justify-content: space-between;
 }
+@media screen and (min-width: 1200px) {
+  .nv-rating-component .form {
+    grid-template-columns: repeat(5, 51px);
+  }
+}
+.nv-rating-component .form .label {
+  display: grid;
+  place-items: center;
+}
 .nv-rating-component .form .radio {
   appearance: none;
+  position: absolute;
 }
 .nv-rating-component .form .value {
   width: 42px;
@@ -98,6 +147,12 @@ body {
   font-weight: 700;
   font-size: 14px;
   color: #7c8798;
+}
+@media screen and (min-width: 1200px) {
+  .nv-rating-component .form .value {
+    width: 51px;
+    height: 51px;
+  }
 }
 .nv-rating-component .form .value:hover {
   background: #fc7614;
@@ -121,6 +176,11 @@ body {
   text-transform: uppercase;
   cursor: pointer;
 }
+@media screen and (min-width: 1200px) {
+  .nv-rating-component .form .submit {
+    margin-top: 32px;
+  }
+}
 .nv-rating-component .form .submit:hover {
   color: #fc7614;
   background-color: white;
@@ -135,9 +195,24 @@ body {
   flex-direction: column;
   align-items: center;
 }
+@media screen and (min-width: 1200px) {
+  .nv-modal {
+    width: 412px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .nv-modal {
+    padding: 45px 40px 45px 32px;
+  }
+}
 .nv-modal .image {
   height: 96px;
   width: auto;
+}
+@media screen and (min-width: 1200px) {
+  .nv-modal .image {
+    height: 108px;
+  }
 }
 .nv-modal .user-rating {
   margin-top: 24px;
@@ -150,6 +225,11 @@ body {
   text-align: center;
   color: #fc7614;
 }
+@media screen and (min-width: 1200px) {
+  .nv-modal .user-rating {
+    margin-top: 32px;
+  }
+}
 .nv-modal .title {
   margin-top: 31px;
   font-weight: 700;
@@ -158,6 +238,13 @@ body {
   text-align: center;
   color: #ffffff;
 }
+@media screen and (min-width: 1200px) {
+  .nv-modal .title {
+    margin-top: 32px;
+    font-size: 28px;
+    line-height: 35px;
+  }
+}
 .nv-modal .text {
   margin-top: 10px;
   font-weight: 400;
@@ -165,6 +252,17 @@ body {
   line-height: 22px;
   color: #969fad;
   text-align: center;
+}
+@media screen and (min-width: 1200px) {
+  .nv-modal .text {
+    font-size: 15px;
+    line-height: 24px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .nv-modal .text {
+    margin-top: 15px;
+  }
 }
 
 /*# sourceMappingURL=index.css.map */

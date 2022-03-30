@@ -16,6 +16,32 @@ $breakpoints: (
   }
 }
 
+@mixin card-style {
+  width: Min(327px, math.percentage(math.div(327, 375)));
+  background: radial-gradient(
+    98.96% 98.96% at 50% 0%,
+    #232a34 0%,
+    #181e27 100%
+  );
+  border-radius: 15px;
+
+  @include media(laptop) {
+    width: 412px;
+  }
+}
+
+@mixin text {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22px;
+  color: #969fad;
+
+  @include media(laptop) {
+    font-size: 15px;
+    line-height: 24px;
+  }
+}
+
 *,
 *::before,
 *::after {
@@ -58,23 +84,6 @@ body {
   height: Max(100vh, 667px);
 }
 
-@mixin card-style {
-  width: Min(327px, math.percentage(math.div(327, 375)));
-  background: radial-gradient(
-    98.96% 98.96% at 50% 0%,
-    #232a34 0%,
-    #181e27 100%
-  );
-  border-radius: 15px;
-}
-
-@mixin text {
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 22px;
-  color: #969fad;
-}
-
 .nv-rating-component,
 .nv-modal {
   &[data-state='hidden'] {
@@ -86,6 +95,10 @@ body {
   @include card-style();
   padding: 24px 24px 32px 24px;
 
+  @include media(laptop) {
+    padding: 32px 39px 32px 32px;
+  }
+
   .star-container {
     width: 40px;
     height: 40px;
@@ -94,9 +107,18 @@ body {
     background: #262e38;
     border-radius: 50%;
 
+    @include media(laptop) {
+      width: 48px;
+      height: 48px;
+    }
+
     .star {
       width: 13.33px;
       height: auto;
+
+      @include media(laptop) {
+        width: 16.75px;
+      }
     }
   }
 
@@ -106,11 +128,21 @@ body {
     font-size: 24px;
     line-height: 30px;
     color: #ffffff;
+
+    @include media(laptop) {
+      margin-top: 36px;
+      font-size: 28px;
+      line-height: 35px;
+    }
   }
 
   .text {
     margin-top: 17px;
     @include text;
+
+    @include media(laptop) {
+      margin-top: 9px;
+    }
   }
 
   .form {
@@ -119,8 +151,18 @@ body {
     grid-template-columns: repeat(5, 42px);
     justify-content: space-between;
 
+    @include media(laptop) {
+      grid-template-columns: repeat(5, 51px);
+    }
+
+    .label {
+      display: grid;
+      place-items: center;
+    }
+
     .radio {
       appearance: none;
+      position: absolute;
     }
 
     .value {
@@ -134,6 +176,11 @@ body {
       font-weight: 700;
       font-size: 14px;
       color: #7c8798;
+
+      @include media(laptop) {
+        width: 51px;
+        height: 51px;
+      }
 
       &:hover {
         background: #fc7614;
@@ -160,6 +207,10 @@ body {
       text-transform: uppercase;
       cursor: pointer;
 
+      @include media(laptop) {
+        margin-top: 32px;
+      }
+
       &:hover {
         color: #fc7614;
         background-color: white;
@@ -175,9 +226,17 @@ body {
   flex-direction: column;
   align-items: center;
 
+  @include media(laptop) {
+    padding: 45px 40px 45px 32px;
+  }
+
   .image {
     height: 96px;
     width: auto;
+
+    @include media(laptop) {
+      height: 108px;
+    }
   }
 
   .user-rating {
@@ -190,6 +249,10 @@ body {
     line-height: 22px;
     text-align: center;
     color: #fc7614;
+
+    @include media(laptop) {
+      margin-top: 32px;
+    }
   }
 
   .title {
@@ -199,11 +262,21 @@ body {
     line-height: 30px;
     text-align: center;
     color: #ffffff;
+
+    @include media(laptop) {
+      margin-top: 32px;
+      font-size: 28px;
+      line-height: 35px;
+    }
   }
 
   .text {
     margin-top: 10px;
     @include text;
     text-align: center;
+
+    @include media(laptop){
+      margin-top: 15px;
+    }
   }
 }
