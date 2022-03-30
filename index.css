@@ -152,6 +152,7 @@ body {
   .nv-rating-component .form .value {
     width: 51px;
     height: 51px;
+    font-size: 16px;
   }
 }
 .nv-rating-component .form .value:hover {
@@ -179,6 +180,7 @@ body {
 @media screen and (min-width: 1200px) {
   .nv-rating-component .form .submit {
     margin-top: 32px;
+    font-size: 15px;
   }
 }
 .nv-rating-component .form .submit:hover {

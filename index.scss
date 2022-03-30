@@ -180,6 +180,7 @@ body {
       @include media(laptop) {
         width: 51px;
         height: 51px;
+        font-size: 16px;
       }
 
       &:hover {
@@ -205,10 +206,11 @@ body {
       letter-spacing: 1.86667px;
       color: #ffffff;
       text-transform: uppercase;
-      cursor: pointer;
+      cursor: pointer;     
 
       @include media(laptop) {
         margin-top: 32px;
+        font-size: 15px;
       }
 
       &:hover {
